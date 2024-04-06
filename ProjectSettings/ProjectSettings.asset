@@ -914,11 +914,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: eb414a3d-d720-4a5e-a197-de50c4e420c3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Figa
+  organizationId: dolar_player
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
