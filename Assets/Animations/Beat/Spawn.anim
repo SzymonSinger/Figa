@@ -29,7 +29,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4
-        value: {x: -65.52, y: 0.09, z: -0.24}
+        value: {x: -65.4, y: 0.09, z: -0.24}
         inSlope: {x: -17.839346, y: 0, z: 0}
         outSlope: {x: -17.839346, y: 0, z: 0}
         tangentMode: 0
@@ -105,7 +105,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -65.52
+        value: -65.4
         inSlope: -17.839346
         outSlope: -17.839346
         tangentMode: 136
@@ -211,21 +211,21 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 3.8333333
+  - time: 3.6333334
     functionName: GoodHit
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.9166667
+  - time: 3.9
     functionName: PerfectHit
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 4.0833335
+  - time: 4.1
     functionName: Suicide
     data: 
     objectReferenceParameter: {fileID: 0}
