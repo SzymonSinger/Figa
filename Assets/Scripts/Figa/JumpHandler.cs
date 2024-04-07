@@ -12,12 +12,12 @@ public class JumpHandler : MonoBehaviour
     private float moveSpeed;
 
     private Vector3 upDirection = new Vector3(0f, 3.5f, 0f); // Up direction vector
-    private Vector3 leftDirection = new Vector3(-7f, 3.5f, 0f); // Left direction vector
-    private Vector3 rightDirection = new Vector3(7f, 3.5f, 0f); // Right direction vector
+    private Vector3 leftDirection = new Vector3(7f, 3.5f, 0f); // Left direction vector
+    private Vector3 rightDirection = new Vector3(-7f, 3.5f, 0f); // Right direction vector
 
     private Vector3 targetPosition; // The target position to move to
     public bool canJump;
-    private bool inRange;
+    public bool inRange;
     private void Start()
     {
         targetPosition = transform.position; // Initialize target position to the current position

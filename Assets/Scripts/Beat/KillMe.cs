@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillMe : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class KillMe : MonoBehaviour
 
     private void Update()
     {
+        if (counter.missed >= 3)
+        {
+            ReloadLevel();
+        }
         if (goodDestroy && !perfectDestroy)
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
@@ -76,5 +81,11 @@ public class KillMe : MonoBehaviour
         counter.missed++;
         counter.combo = 0;
         Destroy(gameObject);
+    }
+    
+    void ReloadLevel()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
