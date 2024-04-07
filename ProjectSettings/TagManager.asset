@@ -8,6 +8,8 @@ TagManager:
   - Beat
   - JumpZone
   - Hiter
+  - DeadZone
+  - Banan
   layers:
   - Default
   - TransparentFX

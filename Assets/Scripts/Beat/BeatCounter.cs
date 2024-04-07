@@ -22,6 +22,7 @@ public class BeatCounter : MonoBehaviour
     private int score = 0;
     private int health = 5;
     private int maxHealth = 5;
+    public GameObject loseScreen;
 
     public GameObject[] _lifes;
     
@@ -39,7 +40,7 @@ public class BeatCounter : MonoBehaviour
         switch (health)
         {
             case 0:
-                ReloadLevel();
+                LoseScreen();
                 break;
             case 1:
                 _lifes[0].SetActive(true);
@@ -99,9 +100,8 @@ public class BeatCounter : MonoBehaviour
     {
         health--;
     }
-    void ReloadLevel()
+    public void LoseScreen()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        loseScreen.SetActive(true);
     }
 }

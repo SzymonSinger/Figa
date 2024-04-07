@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,7 @@ public class JumpHandler : MonoBehaviour
     public bool canJump;
     public bool inRange;
     public Animator anim;
+    public GameObject loseScreen;
     private void Start()
     {
         targetPosition = transform.position; // Initialize target position to the current position
@@ -72,13 +74,12 @@ public class JumpHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeadZone"))
         {
-            ReloadLevel();
+            LoseScreen();
         }
     }
 
-    void ReloadLevel()
+    void LoseScreen()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        loseScreen.SetActive(true);
     }
 }

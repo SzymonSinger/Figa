@@ -87,10 +87,5 @@ public class KillMe : MonoBehaviour
         counter.combo = 0;
         Destroy(gameObject);
     }
-    
-    void ReloadLevel()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
-    }
+
 }

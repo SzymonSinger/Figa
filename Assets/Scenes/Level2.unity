@@ -1273,6 +1273,11 @@ PrefabInstance:
       propertyPath: particle
       value: 
       objectReference: {fileID: 8181164670172190522}
+    - target: {fileID: 2680703176052892675, guid: e03012ab75210144588f4cf682c96bbc,
+        type: 3}
+      propertyPath: mainAudio
+      value: 
+      objectReference: {fileID: 2007686748}
     - target: {fileID: 2895131510492093054, guid: e03012ab75210144588f4cf682c96bbc,
         type: 3}
       propertyPath: m_Name
@@ -2592,6 +2597,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1151867995035010577, guid: fc30517fb891cd54895d0244ad3d6e55,
+        type: 3}
+      propertyPath: loseScreen
+      value: 
+      objectReference: {fileID: 2053804112}
     - target: {fileID: 7029966490694281625, guid: fc30517fb891cd54895d0244ad3d6e55,
         type: 3}
       propertyPath: m_Name
@@ -4587,6 +4597,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1328186551}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2053804112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7874318271273653460, guid: e03012ab75210144588f4cf682c96bbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 593004219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2054019744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4825,6 +4841,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2008054874}
     m_Modifications:
+    - target: {fileID: 4858032819109951707, guid: a6be5793345259b4e97fe21943d8781d,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8163790779783581032, guid: a6be5793345259b4e97fe21943d8781d,
         type: 3}
       propertyPath: m_LocalPosition.x
