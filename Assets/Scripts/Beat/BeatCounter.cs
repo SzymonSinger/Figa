@@ -10,6 +10,7 @@ public class BeatCounter : MonoBehaviour
     public TextMeshProUGUI _combo;
     public TextMeshProUGUI _score;
     public GameObject[] _lifes;
+    public ParticleSystem particle;
 
     public int hited = 0;
 
@@ -24,6 +25,7 @@ public class BeatCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health = maxHealth;
         _combo = GetComponent<TextMeshProUGUI>();
     }
 
@@ -34,15 +36,49 @@ public class BeatCounter : MonoBehaviour
         {
             ReloadLevel();
         }
-        
-        for (int i = health; i > 0; i--)
-        {
-            _lifes[i].SetActive(true);
-        }
 
-        for (int i = health+1; i<= maxHealth; i++)
+        switch (health)
         {
-            _lifes[i].SetActive(false);
+            case 0:
+                ReloadLevel();
+                break;
+            case 1:
+                _lifes[0].SetActive(true);
+                _lifes[1].SetActive(false);
+                _lifes[2].SetActive(false);
+                _lifes[3].SetActive(false);
+                _lifes[4].SetActive(false);
+                break;
+            case 2:
+                _lifes[0].SetActive(true);
+                _lifes[1].SetActive(true);
+                _lifes[2].SetActive(false);
+                _lifes[3].SetActive(false);
+                _lifes[4].SetActive(false);
+                break;
+            case 3:
+                _lifes[0].SetActive(true);
+                _lifes[1].SetActive(true);
+                _lifes[2].SetActive(true);
+                _lifes[3].SetActive(false);
+                _lifes[4].SetActive(false);
+                break;
+            case 4:
+                _lifes[0].SetActive(true);
+                _lifes[1].SetActive(true);
+                _lifes[2].SetActive(true);
+                _lifes[3].SetActive(true);
+                _lifes[4].SetActive(false);
+                break;
+            case 5:
+                _lifes[0].SetActive(true);
+                _lifes[1].SetActive(true);
+                _lifes[2].SetActive(true);
+                _lifes[3].SetActive(true);
+                _lifes[4].SetActive(true);
+                break;
+            default:
+                break;
         }
 
         _combo.text = $"Combo:X{combo.ToString()}";
@@ -62,6 +98,11 @@ public class BeatCounter : MonoBehaviour
     public void AddHealth()
     {
         health++;
+    }
+
+    public void PerfectHit()
+    {
+        particle.Play();
     }
     
     void ReloadLevel()

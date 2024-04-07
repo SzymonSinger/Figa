@@ -59,6 +59,7 @@ public class KillMe : MonoBehaviour
     
     public void DontShootPerfect()
     {
+        counter.PerfectHit();
         jump.canJump = false;
         counter.hited++;
         counter.perfect++;
