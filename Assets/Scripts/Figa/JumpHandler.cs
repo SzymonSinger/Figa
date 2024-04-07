@@ -18,6 +18,7 @@ public class JumpHandler : MonoBehaviour
     private Vector3 targetPosition; // The target position to move to
     public bool canJump;
     public bool inRange;
+    public Animator anim;
     private void Start()
     {
         targetPosition = transform.position; // Initialize target position to the current position
@@ -31,16 +32,19 @@ public class JumpHandler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W))
             {
                 targetPosition = transform.position + upDirection;
+                anim.SetTrigger("Jump");
                 moveSpeed = UpmoveSpeed;
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
                 targetPosition = transform.position + leftDirection;
+                anim.SetTrigger("Jump");
                 moveSpeed = diagonalSpeed;
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
                 targetPosition = transform.position + rightDirection;
+                anim.SetTrigger("Jump");
                 moveSpeed = diagonalSpeed;
             }
         }
