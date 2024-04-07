@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4379212969455994348}
   - component: {fileID: 5266487876441808526}
   - component: {fileID: 2110652967024244688}
+  - component: {fileID: 8656763234401562008}
   - component: {fileID: 3234129011991594831}
   - component: {fileID: 5536414080118767928}
   m_Layer: 0
@@ -330,6 +331,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8656763234401562008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729922951187475522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9509a852d2e1d4a8026c79b1fb132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useTestBeat: 0
+  _pulseSize: 1.15
+  _returnSpeed: 5
 --- !u!65 &3234129011991594831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -424,6 +440,7 @@ GameObject:
   - component: {fileID: 5722611100110541256}
   - component: {fileID: 5843164436881976242}
   - component: {fileID: 5268011854144299428}
+  - component: {fileID: 4168600752095880322}
   - component: {fileID: 3393182704543267290}
   - component: {fileID: 3901608223588009760}
   m_Layer: 0
@@ -498,6 +515,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4168600752095880322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528892250443785139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9509a852d2e1d4a8026c79b1fb132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useTestBeat: 0
+  _pulseSize: 1.15
+  _returnSpeed: 5
 --- !u!65 &3393182704543267290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -604,6 +636,7 @@ GameObject:
   - component: {fileID: 6111329826140962617}
   - component: {fileID: 2899453053406675376}
   - component: {fileID: 121506791819989683}
+  - component: {fileID: 4822715778423372396}
   - component: {fileID: 4837001693791835452}
   - component: {fileID: 4922977637806146535}
   m_Layer: 0
@@ -678,6 +711,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4822715778423372396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874745855711257723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9509a852d2e1d4a8026c79b1fb132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useTestBeat: 0
+  _pulseSize: 1.15
+  _returnSpeed: 5
 --- !u!65 &4837001693791835452
 BoxCollider:
   m_ObjectHideFlags: 0
