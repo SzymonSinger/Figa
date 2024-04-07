@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PulsetoTheBeat : MonoBehaviour
+public class PulseToTheBeat : MonoBehaviour
 {
     [SerializeField] private bool _useTestBeat;
     [SerializeField] private float _pulseSize = 1.15f;
     [SerializeField] private float _returnSpeed = 5f;
     private Vector3 _startSize;
+
+    // Define an event with PulseToTheBeat parameter
+    public static event Action<PulseToTheBeat> OnPulse;
 
     private void Start()
     {
@@ -27,6 +29,9 @@ public class PulsetoTheBeat : MonoBehaviour
     public void Pulse()
     {
         transform.localScale = _startSize * _pulseSize;
+
+        // Invoke the event, passing 'this' as the PulseToTheBeat reference
+        OnPulse?.Invoke(this);
     }
 
     IEnumerator TestBeat()
