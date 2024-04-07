@@ -3,44 +3,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class BeatManager : MonoBehaviour
 {
-    [Header("Basic values")]
-    [Tooltip("Beats per seconds")]
-   [SerializeField] private float _bpm;
-   [SerializeField] private AudioSource _audioSource;
-   [SerializeField] private Intervals[] _intervals;
-
-   private void Update()
-   {
-       foreach (Intervals interval in _intervals)
-       {
-           float sampledTime = (_audioSource.timeSamples / (_audioSource.clip.frequency * interval.GetIntervalLength(_bpm)));
-           interval.CheckForNewInterval(sampledTime);
-       }
-   }
+    [SerializeField] private float _bpm;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private Intervals[] _intervals;
+    private void Update()
+    {
+        foreach (Intervals interval in _intervals)
+        {
+            float sampledTime = (_audioSource.timeSamples /
+                                 (_audioSource.clip.frequency * interval.GetIntervalLength(_bpm)));
+            interval.CheckForNewinterwal(sampledTime);
+        }
+    }
 }
 
 [System.Serializable]
 public class Intervals
 {
-      [SerializeField] private float _steps;
-      [SerializeField] private UnityEvent _trigger;
-      private int _lastInterval;
+    [SerializeField] private float _steps;
+    [SerializeField] private UnityEvent _trigger;
+    private int _lastIntereval;
+    public float GetIntervalLength(float bpm)
+    {
+        return 60f / (bpm * _steps);
+    }
 
-      public float GetIntervalLength(float bpm)
-      {
-          return 60f / (bpm * _steps);
-      }
-
-      public void CheckForNewInterval(float interval)
-      {
-          
-          if (Mathf.FloorToInt(interval) != _lastInterval)
-          {
-              _lastInterval = Mathf.FloorToInt(interval);
-              _trigger.Invoke();
-          }
-      }
+    public void CheckForNewinterwal(float interval)
+    {
+        if (Mathf.FloorToInt(interval) != _lastIntereval)
+        {
+            _lastIntereval = Mathf.FloorToInt(interval);
+            _trigger.Invoke();
+        }
+    }
 }

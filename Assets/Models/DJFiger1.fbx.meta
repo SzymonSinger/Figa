@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: b883d7429a237d74086ac9afc9818f42
+guid: 0946a691a19608641aa2cbbff0810d47
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FigaMat
+    second: {fileID: 2100000, guid: c4f7b9696b7344f48beec7a08d1d9b5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutlineMat
+    second: {fileID: 2100000, guid: 7821ee90817a4d44596eb2b19b9ed8ea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - Beat
+  - JumpZone
+  - Hiter
   layers:
   - Default
   - TransparentFX
