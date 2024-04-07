@@ -20,7 +20,7 @@ public class KillMe : MonoBehaviour
 
     private void Update()
     {
-        if (counter.missed >= 3)
+        if (counter.missed >= 5)
         {
             ReloadLevel();
         }
