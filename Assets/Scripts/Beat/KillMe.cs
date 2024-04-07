@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class KillMe : MonoBehaviour
 {
@@ -61,10 +62,12 @@ public class KillMe : MonoBehaviour
     
     public void DontShootPerfect()
     {
+        counter.PerfectStrike();
         jump.canJump = false;
         counter.hited++;
         counter.perfect++;
         counter.combo++;
+        counter.ScoreCalculator(100);
         Destroy(gameObject);
     }
     public void DontShootGood()
@@ -73,10 +76,12 @@ public class KillMe : MonoBehaviour
         counter.hited++;
         counter.good++;
         counter.combo++;
+        counter.ScoreCalculator(50);
         Destroy(gameObject);
     }
     public void Suicide()
     {
+        counter.RemoveHealth();
         jump.canJump = false;
         counter.missed++;
         counter.combo = 0;
