@@ -28,6 +28,8 @@ public class PulseToTheBeat : MonoBehaviour
 
     public void Pulse()
     {
+        
+        Debug.Log("Event Action Triggered");
         transform.localScale = _startSize * _pulseSize;
 
         // Invoke the event, passing 'this' as the PulseToTheBeat reference

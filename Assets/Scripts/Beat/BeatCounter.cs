@@ -90,7 +90,7 @@ public class BeatCounter : MonoBehaviour
 
     public void PerfectStrike()
     {
-        particle.Play();
+        //particle.Play();
     }
 
     public void AddHealth()
